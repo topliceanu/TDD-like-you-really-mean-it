@@ -4,15 +4,15 @@
 
 Knowledge of the traditional TDD technique is assumed. For a quick refresher, please refer to the appendix at the bottom of this page.
 
-**In "TDD like you really mean it" refactoring happens in only two ways:**
-- by extracting code from test methods into non-test methods inside of the test class, when duplication of code has been observed.
-- by moving non-test methods into domain-specific classes, when the solution design eventually starts to emerge.
+**In "TDD like you really mean it", your workflow is going to be:**
+- to only add brand-new code to test methods in a test class.
+- to only add just enough production code in order to make a failing test pass (production code goes into the same test method).
+- to only create new non-test methods by way of the "extract method" (when you notice duplication of production code).
+- to only create new classes as destinations for "move method".
 
-**Be very strict about this:**
-- Only add code to make a failing test pass
-- Only add brand-new code to test methods in a test class
-- Only create new non-test methods by "extract method"
-- Only create new classes as destinations for "move method"
+**Be very strict about this. Refactoring only happens:**
+- by extracting code from test methods into non-test methods in the same test class, when duplication of code has been observed.
+- by moving non-test methods into domain-specific classes, when the solution design eventually starts to emerge.
 
 Inevitably, there is going to be an initial mental block due to the fact that there is no solution code to test - you obviously can't have tests that talk about a solution that doesn't exist yet.  
 So how do you move past this initial mental block?  
