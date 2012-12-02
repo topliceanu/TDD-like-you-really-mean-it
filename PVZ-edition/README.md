@@ -17,11 +17,11 @@ Knowledge of the traditional TDD technique is assumed. For a quick refresher, pl
 Inevitably, there is going to be an initial mental block due to the fact that there is no solution code to test - you obviously can't have tests that talk about a solution that doesn't exist yet.  
 So how do you move past this initial mental block?  
 How do you jumpstart the process?  
-What can you write tests about?  
-You can write tests about inputs and outputs without there being a piece of formally structured code that takes those inputs and produces those outputs.  
+Is there anything you can write tests about?  
+**Yes.** You can write tests about inputs and outputs without there being a piece of formally structured code that takes those inputs and produces those outputs.  
 You can write tests about domain-specific computations as they intrinsically exist outside of any solution design.  
 In other words, you can write tests about the problem domain, because that's all there is for you to write tests about.  
-And the next step in your solution design will emerge from the code you write to make those tests about the problem pass.  
+You will find the next step in your solution design emerging from the code you write to make those tests about the problem pass.  
 That's the way in.  
 The process isn't going to feel natural, and it's going to make your brain hurt, but remember - if your brain doesn't hurt once in a while, you're not really learning anything new.  
 
