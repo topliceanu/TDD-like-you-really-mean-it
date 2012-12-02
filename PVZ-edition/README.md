@@ -11,7 +11,7 @@ Knowledge of the traditional TDD technique is assumed. For a quick refresher, pl
 - to only create new domain-specific classes as destinations for a "refactoring-move".
 
 **Be very strict about this. Refactoring only happens:**
-- by extracting code from test methods into non-test methods in the same test class, when duplication of production code has been observed.
+- by extracting code from test methods into non-test methods in the same test class, when duplication of production code has been noticed.
 - by moving non-test methods into domain-specific classes, when the solution design eventually starts to emerge.
 
 Inevitably, there is going to be an initial mental block due to the fact that there is no solution code to test - you obviously can't have tests that talk about a solution that doesn't exist yet.  
@@ -22,9 +22,9 @@ Is there anything you can write tests about?
 You can write tests about inputs and outputs without there being a piece of formally structured code that takes those inputs and produces those outputs.  
 You can write tests about domain-specific computations as they intrinsically exist outside of any solution design.  
 In other words, you can write tests about the problem domain, because that's all there is for you to write tests about.  
-You are going to notice how the next step in your solution design emerges from the code you wrote to make those tests about the problem pass.  
+You are going to notice how the next step in your solution design emerges from the code you wrote to make those tests about the problem domain pass.  
 That's the way in.  
-The process isn **not** going to feel natural, and it's going to make your brain hurt, but remember - if your brain doesn't hurt once in a while, you're not really learning anything new.  
+The process is **not** going to feel natural, and it's going to make your brain hurt, but remember - if your brain doesn't hurt once in a while, you're not really learning anything new.  
 
 ### The invariants of the Plants vs. Zombies game
 
