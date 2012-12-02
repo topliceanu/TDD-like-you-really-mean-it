@@ -1,21 +1,21 @@
 ## TDD like you really mean it - PVZ edition
 
-**"TDD like you really mean it"** is an extreme coding technique that reveals the true nature of TDD.
+**"TDD like you really mean it"** is a rather extreme coding technique that reveals the true nature of TDD.
 
 Knowledge of the traditional TDD technique is assumed. For a quick refresher, please refer to the appendix at the bottom of this page.
 
 **In "TDD like you really mean it", your workflow is going to be:**
 - to only add brand-new code to test methods in a test class.
-- to only add just enough production code in order to make a failing test pass (production code goes into the same test method).
-- to only create new non-test methods by way of the "extract method" (when you notice duplication of production code).
-- to only create new classes as destinations for "move method".
+- to only add just enough production code in order to make a failing test pass (production code goes into the same test method where the test code is).
+- to only create new non-test methods by way of a "refactoring-extraction" (when you notice duplication of production code).
+- to only create new domain-specific classes as destinations for a "refactoring-move".
 
 **Be very strict about this. Refactoring only happens:**
-- by extracting code from test methods into non-test methods in the same test class, when duplication of code has been observed.
+- by extracting code from test methods into non-test methods in the same test class, when duplication of production code has been observed.
 - by moving non-test methods into domain-specific classes, when the solution design eventually starts to emerge.
 
 Inevitably, there is going to be an initial mental block due to the fact that there is no solution code to test - you obviously can't have tests that talk about a solution that doesn't exist yet.  
-So how do you move past this initial mental block?  
+So how do you overcome that initial mental block?  
 How do you jumpstart the process?  
 Is there anything you can write tests about?  
 **Yes.**  
@@ -24,7 +24,7 @@ You can write tests about domain-specific computations as they intrinsically exi
 In other words, you can write tests about the problem domain, because that's all there is for you to write tests about.  
 You are going to notice how the next step in your solution design emerges from the code you wrote to make those tests about the problem pass.  
 That's the way in.  
-The process isn't going to feel natural, and it's going to make your brain hurt, but remember - if your brain doesn't hurt once in a while, you're not really learning anything new.  
+The process isn **not** going to feel natural, and it's going to make your brain hurt, but remember - if your brain doesn't hurt once in a while, you're not really learning anything new.  
 
 ### The invariants of the Plants vs. Zombies game
 
