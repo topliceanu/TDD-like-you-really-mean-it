@@ -21,7 +21,7 @@ describe 'Plants vs. Zombie', ->
         true
 
     bitePlant = (zombie, plant) ->
-        true
+        if plant then true else false
 
     isNear = (plant, zombie) ->
         true
