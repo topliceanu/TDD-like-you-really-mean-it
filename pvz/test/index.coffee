@@ -29,11 +29,13 @@ describe 'Plants vs. Zombie', ->
     zombieWon = (zombie, plant) ->
         (zombieIsAlive zombie) and (plantIsDead plant)
 
+    plantWon = (zombie, plant) ->
+        (zombieIsDead zombie) and (plantIsAlive plant)
 
     it 'should detect that zombie won', ->
         zombie = true
         plant = false
-        gameEnded = (zombieWon zombie, plant) or ((zombieIsDead zombie) and (plantIsAlive plant))
+        gameEnded = (zombieWon zombie, plant) or (plantWon zombie, plant)
         assert.equal true, gameEnded
 
     it 'should detect that zombie is dead', ->
