@@ -32,6 +32,9 @@ describe 'Plants vs. Zombie', ->
     plantWon = (zombie, plant) ->
         (zombieIsDead zombie) and (plantIsAlive plant)
 
+    position = (plant) ->
+        true
+
     it 'should detect that game ended', ->
         zombie = true
         plant = false
@@ -94,7 +97,8 @@ describe 'Plants vs. Zombie', ->
         assert.equal false, (bitePlant zombie, plant)
 
     it 'plant should have a position', ->
-        assert.equal true, pozition plant
+        plant = true
+        assert.equal true, position plant
 
     it 'zombie should be near plant to bite it', ->
         zombie = true
