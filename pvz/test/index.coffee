@@ -17,6 +17,9 @@ describe 'Plants vs. Zombie', ->
     fireProjectile = (plant) ->
         if plant then true else false
 
+    hitZombie = (zombie) ->
+        return true
+
     it 'should detect that zombie won', ->
         zombie = true
         plant = false
