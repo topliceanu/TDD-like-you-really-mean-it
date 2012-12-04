@@ -18,10 +18,13 @@ describe 'Plants vs. Zombie', ->
         if plant then true else false
 
     hitZombie = (zombie) ->
-        return true
+        true
 
     bitePlant = (zombie, plant) ->
-        return true
+        true
+
+    isNear = (plant, zombie) ->
+        true
 
     it 'should detect that zombie won', ->
         zombie = true
