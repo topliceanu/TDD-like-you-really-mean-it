@@ -15,7 +15,7 @@ describe 'Plants vs. Zombie', ->
         plant is true
 
     fireProjectile = (plant) ->
-        return true
+        if plant then true else false
 
     it 'should detect that zombie won', ->
         zombie = true
@@ -42,3 +42,7 @@ describe 'Plants vs. Zombie', ->
     it 'plant should fire a projectile', ->
         plant = true
         assert.equal true, fireProjectile plant
+
+    it 'dead plant cannot fire a projectile', ->
+        plant = false
+        assert.equal false, fireProjectile plant
