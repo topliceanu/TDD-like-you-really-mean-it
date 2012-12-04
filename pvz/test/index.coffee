@@ -13,7 +13,7 @@ describe 'Plants vs. Zombie', ->
         not plant
 
     it 'should detect that the game is over', ->
-        gameEnded = (zombie and not plant) or ((zombieIsDead zombie) and plant)
+        gameEnded = (zombie and plantIsDead plant) or ((zombieIsDead zombie) and plant)
         assert.equal true, gameEnded
 
     it 'zombie is alive', ->
