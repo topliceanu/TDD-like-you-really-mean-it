@@ -96,4 +96,9 @@ describe 'Plants vs. Zombie', ->
     it 'zombie should be near plant to bite it', ->
         zombie = true
         plant = true
-        assert.equal true, isNear plant, zombie
+        assert.equal true, (isNear plant, zombie)
+
+    it 'zombie is not near plant', ->
+        zombie = true
+        plant = true
+        assert.equal false, (isNear plant, zombie)
