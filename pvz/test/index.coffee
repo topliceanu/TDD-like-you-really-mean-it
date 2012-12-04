@@ -35,3 +35,8 @@ describe 'Plants vs. Zombie', ->
     it 'should detect that plant is alive', ->
         plant = true
         assert.equal true, plantIsAlive plant
+
+    it 'plant should fire a projectile', ->
+        assert.equal true, fireProjectile plant
+
+
