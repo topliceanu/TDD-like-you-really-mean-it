@@ -46,3 +46,7 @@ describe 'Plants vs. Zombie', ->
     it 'dead plant cannot fire a projectile', ->
         plant = false
         assert.equal false, fireProjectile plant
+
+    it 'projectile hits zombie', ->
+        zombie = true
+        assert.equal true, hitZombie zombie
