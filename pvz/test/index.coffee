@@ -88,6 +88,11 @@ describe 'Plants vs. Zombie', ->
         plant = false
         assert.equal false, (bitePlant zombie, plant)
 
+    it 'dead zombies cannot bite plants', ->
+        zombie = false
+        plant = true
+        assert.equal false, (bitePlant zombie, plant)
+
     it 'zombie should be near plant to bite it', ->
         zombie = true
         plant = true
