@@ -5,6 +5,9 @@ describe 'Plants vs. Zombie', ->
     zombieIsDead = (zombie) ->
         zombie is false
 
+    zombieIsAlive = (zombie) ->
+        zombie is true
+
     plantIsDead = (plant) ->
         plant is false
 
@@ -14,7 +17,7 @@ describe 'Plants vs. Zombie', ->
     it 'should detect that zombie won', ->
         zombie = true
         plant = false
-        gameEnded = (zombie and (plantIsDead plant)) or ((zombieIsDead zombie) and plant)
+        gameEnded = ((zombieIsAlive zombie) and (plantIsDead plant)) or ((zombieIsDead zombie) and (plantIsAlive plant))
         assert.equal true, gameEnded
 
     it 'should detect that zombie is dead', ->
@@ -23,7 +26,7 @@ describe 'Plants vs. Zombie', ->
 
     it 'should detect that zombie is alive', ->
         zombie = true
-        assert.equal true, zombie
+        assert.equal true, zombieIsAlive zombie
 
     it 'should detect that plant is dead', ->
         plant = false
